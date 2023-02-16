@@ -37,7 +37,9 @@ const SpinRow = (props) => {
         })}
       </div>
       <div className="spin-button">
-        <button onClick={changeSpin}>Hit to spin</button>
+        <button data-cy="spin-button" onClick={changeSpin}>
+          Hit to spin
+        </button>
       </div>
     </>
   );
