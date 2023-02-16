@@ -28,9 +28,13 @@ const SpinRow = (props) => {
   return (
     <>
       <div data-cy="spin-row" className="spin-row">
-        <div data-cy="spin1">{getSpins[0]}</div>
-        <div data-cy="spin2">{getSpins[1]}</div>
-        <div data-cy="spin3">{getSpins[2]}</div>
+        {getSpins.map((spin, index) => {
+          return (
+            <>
+              <div data-cy={`spin${index + 1}`}>{spin}</div>
+            </>
+          );
+        })}
       </div>
       <div className="spin-button">
         <button onClick={changeSpin}>Hit to spin</button>
