@@ -1,6 +1,6 @@
 import "./App.css";
-import SpinRow from "./components/SpinRow";
-import SpinComment from "./components/SpinComment";
+import SpinRow from "./components/SpinRow/SpinRow";
+import SpinComment from "./components/SpinComment/SpinComment";
 import { useState } from "react";
 
 function App() {

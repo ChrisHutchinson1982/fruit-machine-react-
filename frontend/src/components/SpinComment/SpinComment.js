@@ -1,7 +1,9 @@
 const SpinComment = (props) => {
   return (
     <div className="spin-comment-container">
-      <h2 className="spin-comment">{props.spinComment}</h2>
+      <h2 data-cy="spin-comment" className="spin-comment">
+        {props.spinComment}
+      </h2>
     </div>
   );
 };
