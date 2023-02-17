@@ -1,7 +1,9 @@
 import { useState } from "react";
+import SpinComment from "../SpinComment/SpinComment";
 
-const SpinRow = (props) => {
+const SpinRow = () => {
   const [getSpins, setgetSpins] = useState(["❓", "❓", "❓"]);
+  const [spinComment, setSpinComment] = useState("");
 
   const changeSpin = () => {
     const spinList = ["🍒", "🍌", "🍏", "🍊", "🍇"];
@@ -17,11 +19,11 @@ const SpinRow = (props) => {
     setgetSpins(spins);
 
     if (spins[0] === spins[1] && spins[1] === spins[2]) {
-      props.setSpinComment("WIN! WIN! WIN!");
+      setSpinComment("WIN! WIN! WIN!");
     } else if (spins[0] !== spins[1] && spins[1] !== spins[2]) {
-      props.setSpinComment("UNLUCKY!");
+      setSpinComment("UNLUCKY!");
     } else {
-      props.setSpinComment("ALMOST!");
+      setSpinComment("ALMOST!");
     }
   };
 
@@ -41,6 +43,7 @@ const SpinRow = (props) => {
           Hit to spin
         </button>
       </div>
+      <SpinComment spinComment={spinComment} />
     </>
   );
 };
