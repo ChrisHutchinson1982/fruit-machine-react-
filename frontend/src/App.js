@@ -7,11 +7,13 @@ function App() {
   // const [spinComment, setSpinComment] = useState("");
 
   return (
-    <div className="App">
-      <h1>Fruit Machine</h1>
-      <SpinRow />
-      {/* <SpinComment spinComment={spinComment} /> */}
-    </div>
+    <>
+      <div className="App">
+        <h1>Fruit Machine</h1>
+        <SpinRow />
+        {/* <SpinComment spinComment={spinComment} /> */}
+      </div>
+    </>
   );
 }
 

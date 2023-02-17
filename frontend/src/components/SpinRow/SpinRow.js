@@ -3,7 +3,7 @@ import SpinComment from "../SpinComment/SpinComment";
 
 const SpinRow = () => {
   const [getSpins, setgetSpins] = useState(["❓", "❓", "❓"]);
-  const [spinComment, setSpinComment] = useState("");
+  const [renderComments, setRenderComments] = useState(false);
 
   const changeSpin = () => {
     const spinList = ["🍒", "🍌", "🍏", "🍊", "🍇"];
@@ -17,14 +17,7 @@ const SpinRow = () => {
     }
 
     setgetSpins(spins);
-
-    if (spins[0] === spins[1] && spins[1] === spins[2]) {
-      setSpinComment("WIN! WIN! WIN!");
-    } else if (spins[0] !== spins[1] && spins[1] !== spins[2]) {
-      setSpinComment("UNLUCKY!");
-    } else {
-      setSpinComment("ALMOST!");
-    }
+    setRenderComments(true);
   };
 
   return (
@@ -43,7 +36,7 @@ const SpinRow = () => {
           Hit to spin
         </button>
       </div>
-      <SpinComment spinComment={spinComment} />
+      <SpinComment getSpins={getSpins} renderComments={renderComments} />
     </>
   );
 };
