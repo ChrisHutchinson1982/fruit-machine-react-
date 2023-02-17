@@ -8,7 +8,8 @@ const SpinComment = (props) => {
     comment = "WIN! WIN! WIN!";
   } else if (
     props.getSpins[0] !== props.getSpins[1] &&
-    props.getSpins[1] !== props.getSpins[2]
+    props.getSpins[1] !== props.getSpins[2] &&
+    props.getSpins[0] !== props.getSpins[2]
   ) {
     comment = "UNLUCKY!";
   } else {
