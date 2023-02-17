@@ -15,4 +15,21 @@ describe("SpinComment", () => {
     cy.get('[data-cy="spin2"]').should("not.contain.text", "❓");
     cy.get('[data-cy="spin3"]').should("not.contain.text", "❓");
   });
+  it("display a fruit emoji after button is selected", () => {
+    const setSpinCommentMock = cy.stub();
+    cy.mount(<SpinRow setSpinComment={setSpinCommentMock} />);
+    cy.get('[data-cy="spin-button"]').click();
+
+    cy.get('[data-cy="spin1"]').each((x) => {
+      expect(x.text()).to.be.oneOf(["🍒", "🍌", "🍏", "🍊", "🍇"]);
+    });
+
+    cy.get('[data-cy="spin2"]').each((x) => {
+      expect(x.text()).to.be.oneOf(["🍒", "🍌", "🍏", "🍊", "🍇"]);
+    });
+
+    cy.get('[data-cy="spin3"]').each((x) => {
+      expect(x.text()).to.be.oneOf(["🍒", "🍌", "🍏", "🍊", "🍇"]);
+    });
+  });
 });
