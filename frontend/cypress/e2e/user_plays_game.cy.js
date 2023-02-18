@@ -29,4 +29,8 @@ describe("User plays game", () => {
       expect(x.text()).to.be.oneOf(["WIN! WIN! WIN!", "ALMOST!", "UNLUCKY!"]);
     });
   });
+  it("game shows no comment before button is clicked", () => {
+    cy.visit("http://localhost:3000/");
+    cy.get('[data-cy="spin-comment"]').should("not.exist");
+  });
 });
