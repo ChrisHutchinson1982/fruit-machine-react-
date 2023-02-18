@@ -43,5 +43,3 @@ $ npm run test
 ## Screenshots
 
 ![View1](./docs/screen1.png)
-
-![View2](./docs/screen2.png)
