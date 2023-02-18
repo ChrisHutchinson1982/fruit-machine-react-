@@ -20,7 +20,10 @@ const SpinComment = (props) => {
     return (
       <>
         <div className="spin-comment-container">
-          <h2 data-cy="spin-comment" className="spin-comment">
+          <h2
+            data-cy="spin-comment"
+            className=" text-red-600 text-3xl font-bold normal-case font-mono animate-bounce"
+          >
             {comment}
           </h2>
         </div>
