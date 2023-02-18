@@ -25,9 +25,9 @@ const SpinRow = () => {
       <div data-cy="spin-row" className="spin-row">
         {getSpins.map((spin, index) => {
           return (
-            <>
-              <div data-cy={`spin${index + 1}`}>{spin}</div>
-            </>
+            <div key={index} data-cy={`spin${index + 1}`}>
+              {spin}
+            </div>
           );
         })}
       </div>
