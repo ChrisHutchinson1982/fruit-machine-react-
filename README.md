@@ -35,11 +35,19 @@ $ npm run test
 
 ## Technologies
 
+- Javascript
 - React
 - Node.js
 - Cypress for testing
-- CSS Tailwind for some very basic and fun styling
+- HTML
+- CSS Tailwind
 
 ## Screenshots
 
 ![View1](./docs/screen1.png)
+
+## Learning points and next steps
+
+- Gained confidence using React with Cypress and CCS Tailwind.
+- Learnt how to test scenarios where the output could be a number of different possibilities.
+- Created some very basic and fun styling using CCS Tailwind but want bring a more professional and stylish look into my next project.
